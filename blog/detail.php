@@ -1,3 +1,15 @@
+<?php
+// require("D:\xampp\htdocs\api\article\show.php")
+$a_id=$_GET['a_id'];
+$base_url="http://localhost/api/article/show.php?";
+$query=http_build_query(array('a_id'=>$a_id));
+$ch=curl_init();
+curl_setopt($ch,CURLOPT_URL,$base_url.$query);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+$res=curl_exec($ch);
+$res=json_decode($res,true);
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,7 +20,7 @@
     <title>文章列表</title>
     <link rel="stylesheet" href="css/common.css">
    <script src="./js/jquery-3.7.0.js"></script>
-    
+   <link rel="stylesheet" href="css/common.css">
     <script src="./js/articleList.js"></script>
 
     <style>
@@ -29,7 +41,24 @@
             line-height: 1.8em;
             text-indent: 2em;
         }
+        #article_title{
+            text-align: center;
+        }
+        article{
+            margin-top: 5vh;
+            width: 90%;
+            margin-right: auto;
+            margin-left: auto;
+        }
+        .paragraph{
+            text-indent: 2em;
+            font-weight: normal;
+            font-size: 16px;
+        }
+
+        
     </style>
+
 </head>
 
 <body>
@@ -39,7 +68,7 @@
         </div>
         <nav>
             <a class="dangqian" href="index.html">首页</a>
-            <a href="">短文</a>
+            <a href="duanwen.html">短文</a>
             <a href="liuyan.html">留言板</a>
             <a href="l"></a>
             <a href="l"></a>
@@ -50,9 +79,21 @@
         </nav>
         <div id="main" >
             <main>
-                <ul>
-                    
-                </ul>
+            <h1 id="article_title"><? echo $res['article_title']; ?> <h1>
+            <!-- <p id="athor"> -->
+                <? //echo $res['article_author']; ?>
+            <!-- </p> -->
+            <article>
+            <?
+           
+            foreach (explode("\\n",$res['article_text']) as $p) {
+                echo '<p class="paragraph">';
+                echo $p;
+                echo "</p>";
+            }
+
+            ?>
+             </article>
             </main>
         </div>
        
@@ -63,19 +104,7 @@
         </footer>
     </div>
 
-   <!-- <template id="acticle-item-t">
-        <li style="display: flex;">
-            <h2 id="article-title"></h2>
-            <div style="display: flex;">
-                <span id="article-info" style="flex-basis: 70%;"></span>
-                <a href="">查看文章</a>
-            </div>
-            <input type="hidden" name="article-id">
-        </li>
-   </template> -->
-
-   
-<script>$(document).ready(function(){
+    <script>$(document).ready(function(){
     var user_id=localStorage.getItem('currentUserID');
     user_id=user_id?user_id:-1;
     if(user_id>0){
@@ -89,6 +118,7 @@
         $("#loginHref").hide();
     }
 })</script>
+ 
 </body>
 
 </html>

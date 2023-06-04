@@ -33,6 +33,7 @@ function article_select_by_id($article_id){
    $stmt=$dbh->prepare($select_by_ID_article);
     $stmt->bindParam(":a_id",$article_id);
     $stmt->execute();
+    $stmt->setFetchMode(PDO::FETCH_ASSOC);
     return $stmt->fetch();
 }
 

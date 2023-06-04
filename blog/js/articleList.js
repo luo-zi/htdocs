@@ -14,7 +14,7 @@ $(document).ready(function(){
             
             var rightArea=$('<div style="display: flex;flex-basis=75%;"></div>')
             rightArea.append($('<span class="article-info" style="flex-basis: 70%"></span>').text("简介:"+element.article_info));
-            rightArea.append($("<a>查看文章</a>").attr("href","http://localhost/blog/detail.php?article_id="+element.article_id));
+            rightArea.append($("<a>查看文章</a>").attr("href","http://localhost/blog/detail.php?a_id="+element.article_id));
             
             li.append(rightArea);
 
