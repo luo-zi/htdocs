@@ -29,6 +29,20 @@
             line-height: 1.8em;
             text-indent: 2em;
         }
+        #main{
+            position: relative;
+        }
+        #addArticle{
+            position: absolute;
+            right: 2em;
+            bottom: 2em;
+            font-weight: bold;
+            background-color: rgba(100,99,160,60);
+            border-radius: 15%;
+        }
+        #addArticle:hover{
+            background-color: rgba(120,110,160,60);
+        }
     </style>
 </head>
 
@@ -39,7 +53,7 @@
         </div>
         <nav>
             <a class="dangqian" href="index.html">首页</a>
-            <a href="">短文</a>
+            <a style="pointer-events: none;">短文</a>
             <a href="liuyan.html">留言板</a>
             <a href="l"></a>
             <a href="l"></a>
@@ -48,12 +62,14 @@
             <a id="loginHref" href="login.html">登录</a>
             <a id="registerHref" href="register.html">注册</a>
         </nav>
-        <div id="main" >
+        <div id="main">
             <main>
                 <ul>
                     
                 </ul>
+                
             </main>
+            <button id="addArticle">创建新文章</button>
         </div>
        
         <footer>

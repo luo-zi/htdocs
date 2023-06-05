@@ -68,7 +68,7 @@ $res=json_decode($res,true);
         </div>
         <nav>
             <a class="dangqian" href="index.html">首页</a>
-            <a href="duanwen.html">短文</a>
+            <a href="./articleList.html">短文</a>
             <a href="liuyan.html">留言板</a>
             <a href="l"></a>
             <a href="l"></a>
@@ -86,7 +86,7 @@ $res=json_decode($res,true);
             <article>
             <?
            
-            foreach (explode("\\n",$res['article_text']) as $p) {
+            foreach (explode("\n",$res['article_text']) as $p) {
                 echo '<p class="paragraph">';
                 echo $p;
                 echo "</p>";

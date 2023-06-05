@@ -1,5 +1,5 @@
 <?php
-require_once("D:\\xampp\htdocs\DAO\userDAO.php");
+require_once(dirname(__FILE__)."/../../DAO\userDAO.php");
 $username=$_GET['username'];
 $password=$_GET['password'];
 $user_id=user_login($username,$password)[0];

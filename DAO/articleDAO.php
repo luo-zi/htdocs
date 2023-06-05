@@ -45,9 +45,9 @@ function article_select_all(){
     return $stmt->fetchAll();
 }
 
-function article_update_by_ID($article_text,$article_title,$article_id,$article_info){
+function article_update_by_ID($article_id,$article_text,$article_title,$article_info){
     global $dbh,$update_by_ID_article;
-    $stmt->$dbh->prepare($update_by_ID_article);
+    $stmt=$dbh->prepare($update_by_ID_article);
     $stmt->bindParam(":a_text",$article_text);
     $stmt->bindParam(":a_title",$article_title);
     $stmt->bindParam(":a_id",$article_id);

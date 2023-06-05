@@ -1,6 +1,6 @@
 <?php
 
-require_once("D:\\xampp\htdocs\DAO\articleDAO.php");
+require_once(dirname(__FILE__)."/../../DAO/articleDAO.php");
 
 $res=article_select_all();
 
