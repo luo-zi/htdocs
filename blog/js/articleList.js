@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    console.log("some")
+    // console.log("some")
 
 
     $.get("../api/article/list.php",function(data,status){

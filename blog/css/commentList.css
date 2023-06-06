@@ -1,0 +1,46 @@
+#main main{
+    height: 100%;
+    width: 100%;
+}
+#main main ul{
+    display: block;
+    width: 95%;
+     height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    border-left: dashed 3px rgb(16, 72, 76);
+    border-right: dashed 3px rgb(16, 72, 76);
+    
+}
+#main main ul li{
+    display: flex;
+    height: 3em;
+    
+}
+#main main ul li span{
+    display: block;
+    text-align: center;
+    flex-basis: 80%;
+    height: 100%;
+    line-height: 3em;
+    background-color: rgb(78, 131, 134);
+    flex-grow: 1;
+}
+#main main ul li a{
+    display: block;
+    height: 100%;
+    flex-basis: 20%;
+    text-decoration: none;
+    text-align: center;
+    line-height: 3em;
+    color: #000;
+    background-color: rgb(134, 86, 96);
+}
+#main main ul li a:hover{
+    background-color: rgb(227, 57, 22);
+    color: rgb(242, 174, 126);
+
+}
+#main main ul li span:hover{
+    background-color: rgb(31, 209, 254);
+}

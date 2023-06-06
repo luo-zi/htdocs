@@ -1,5 +1,6 @@
 <?php
-require_once("D:\\xampp\htdocs\DButil.php");
+
+require_once(dirname(__FILE__)."/../DButil.php");
 
 $insert_article="insert into article(article_author_id,article_title,article_text,article_info) values(:aa_id,:a_title,:a_text,:a_info)";
 

@@ -88,7 +88,7 @@ if($mode=="update"){
         <nav>
             <a class="dangqian" href="index.html">首页</a>
             <a href="./articleList.html">短文</a>
-            <a href="liuyan.html">留言板</a>
+            <a href="commentList.html">留言板</a>
             <a href="l"></a>
             <a href="l"></a>
             <a href="l"></a>

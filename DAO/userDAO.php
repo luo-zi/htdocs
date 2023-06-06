@@ -1,5 +1,5 @@
 <?php
-require_once("D:\\xampp\htdocs\DButil.php");
+require_once(dirname(__FILE__)."/../DButil.php");
 
 // 添加用户
 $insert_user="insert into User (username,password) values(:username,:password)";
